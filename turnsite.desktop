@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Exec=~/turnsite
+Hidden=false
+X-GNOME-Autostart-enabled=true
+Name[en_ZA]=turnsite
+Name=turnsite
+Comment[en_ZA]=
+Comment=
+
