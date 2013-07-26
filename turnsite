@@ -1,0 +1,12 @@
+#!/bin/bash
+#metacity &
+xhost local:
+export DISPLAY=:0
+unclutter -root -display :0 -idle 0 -visible -grab &
+xset s off
+xset s -dpms
+sleep 10
+python news24.py >>  /tmp/news24.log 2>> /tmp/news24.log
+
+
+
