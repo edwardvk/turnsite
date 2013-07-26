@@ -46,7 +46,7 @@ websites = settings.websites
 win = list()
 window = list()
 lastreload = list()
-starthtml = os.path.join(os.path.dirname(os.path.abspath( __file__ )),"start.html")
+
 
 
 
@@ -66,7 +66,7 @@ for website in websites:
 	win.append(gtk.Window())
 	window.append(webkit.WebView())
 
-	window[-1].open(starthtml)
+	
 	
 
 	win[-1].resize(1024, 768)
