@@ -11,7 +11,6 @@ import settings
 onlyoneprocess.onlyoneprocess("turnsite")
 gobject.threads_init()
 
-
 try: 
 	libgobject = ctypes.CDLL('/usr/lib/i386-linux-gnu/libgobject-2.0.so.0')
 	libsoup = ctypes.CDLL('/usr/lib/i386-linux-gnu/libsoup-2.4.so.1')
@@ -38,9 +37,9 @@ websites = settings.websites
 
 
 
-
-#proxy_uri = libsoup.soup_uri_new('http://www.in24.co.za:8888') # set your proxy url
-#libgobject.g_object_set(session, "proxy-uri", proxy_uri, None)
+if settings.proxy:
+	proxy_uri = libsoup.soup_uri_new(settings.proxy) # set your proxy url
+	libgobject.g_object_set(session, "proxy-uri", proxy_uri, None)
 
 
 win = list()
@@ -65,9 +64,6 @@ def check_reload(windowid):
 for website in websites:
 	win.append(gtk.Window())
 	window.append(webkit.WebView())
-
-	
-	
 
 	win[-1].resize(1024, 768)
 	win[-1].add(window[-1])
@@ -123,7 +119,7 @@ def toggle():
 			print "Problem", repr(e)
 		
 
-gobject.timeout_add(5*1000, toggle) 
+gobject.timeout_add(settings.delay*1000, toggle) 
 #check_reload(0)
 #toggle()
 
