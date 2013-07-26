@@ -12,6 +12,6 @@ For use as a display screen in foyers.
 
 To install:
 
-apt-get install unclutter
+apt-get install python-webkit
 
 
