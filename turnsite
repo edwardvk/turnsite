@@ -1,10 +1,11 @@
 #!/bin/bash
 xhost local:
 export DISPLAY=:0
-#unclutter -root -display :0 -idle 0 -visible -grab &
+unclutter -root -display :0 -idle 0 -visible -grab &
 xset s off
 xset s -dpms
 python turnsite.py
+
 
 
 

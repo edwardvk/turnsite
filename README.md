@@ -11,7 +11,7 @@ This script will display any website fullscreen for 20 seconds and then changes 
 For use as a display screen in foyers. 
 
 In order to use this you will need to install:
-apt-get install python-webkit
+apt-get install python-webkit unclutter
 
 Then unpack the files to some folder, I usually just through them in the main users home folder, since it's probably going to be on a dedicated pc anyway.
 
